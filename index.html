@@ -1,1 +1,451 @@
-olá user
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontre o espaço de coworking perfeito com o SeatHub. Busque, compare e reserve espaços de trabalho compartilhado com comodidades completas. App mobile disponível.">
+    <meta name="keywords" content="coworking, espaço de trabalho, escritório compartilhado, trabalho remoto, networking, produtividade">
+    <meta name="author" content="SeatHub">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="SeatHub - Encontre o Espaço de Coworking Perfeito">
+    <meta property="og:description" content="Conecte-se com os melhores espaços de trabalho compartilhado. Encontre ambientes inspiradores, equipados e prontos para impulsionar sua produtividade.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seathub.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SeatHub - Encontre o Espaço de Coworking Perfeito">
+    <meta name="twitter:description" content="Conecte-se com os melhores espaços de trabalho compartilhado. Encontre ambientes inspiradores, equipados e prontos para impulsionar sua produtividade.">
+    <title>SeatHub - Encontre o Espaço de Coworking Perfeito</title>
+    <link rel="canonical" href="https://seathub.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="./images/seathubLogo01.png" alt="SeatHub Logo" class="logo-img">
+            </a>
+            
+            <nav role="navigation" aria-label="Menu principal">
+                <ul class="nav-menu">
+                    <li><a href="#explore">Benefícios</a></li>
+                    <li><a href="#how-it-works">Como Funciona</a></li>
+                    <li><a href="#amenities">Comodidades</a></li>
+                    <li><a href="#app">App</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="pt">PT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                </div>
+                
+                <a href="https://seathub.net/" target="_blank" class="header-cta">Acessar</a>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Seção Hero - Apresentativa -->
+        <section class="hero-section" role="banner" aria-labelledby="hero-title">
+        <div class="floating-elements">
+            <i class="fas fa-building floating-icon"></i>
+            <i class="fas fa-users floating-icon"></i>
+            <i class="fas fa-wifi floating-icon"></i>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 id="hero-title">
+                    Encontre o <br><span class="highlight">Espaço Perfeito</span>
+                    Para Seu Coworking
+                </h1>
+                <p>
+                    Conecte-se com os melhores espaços de trabalho compartilhado. 
+                    Encontre ambientes inspiradores, equipados e prontos para 
+                    impulsionar sua produtividade e networking.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="https://seathub.net/" target="_blank" class="btn-primary">
+                        <i class="fas fa-search"></i> Explorar Espaços
+                    </a>
+                    <a href="#how-it-works" class="btn-secondary">
+                        <i class="fas fa-play"></i> Como Funciona
+                    </a>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Espaços Disponíveis</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label">Usuários Ativos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Cidades</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Espaço de Coworking Moderno com pessoas trabalhando colaborativamente" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Benefícios -->
+    <section class="benefits-section" id="explore">
+        <div class="benefits-container">
+            <header class="section-header">
+                <h2 class="section-title">Por que escolher o SeatHub?</h2>
+                <p class="section-subtitle">
+                    Descubra as vantagens de encontrar seu espaço de coworking ideal conosco
+                </p>
+            </header>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="benefit-title">Busca Inteligente</h3>
+                    <p class="benefit-description">
+                        Filtros avançados para encontrar exatamente o que você precisa: localização, preço, comodidades e muito mais.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="benefit-title">Disponibilidade 24/7</h3>
+                    <p class="benefit-description">
+                        Acesse informações atualizadas em tempo real sobre disponibilidade e reserve seu espaço a qualquer hora.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="benefit-title">Segurança Garantida</h3>
+                    <p class="benefit-description">
+                        Todos os espaços são verificados e validados para garantir sua segurança e tranquilidade.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="benefit-title">Networking</h3>
+                    <p class="benefit-description">
+                        Conecte-se com outros profissionais e expanda sua rede de contatos em ambientes colaborativos.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="benefit-title">Infraestrutura Completa</h3>
+                    <p class="benefit-description">
+                        WiFi de alta velocidade, salas de reunião, áreas de descanso e tudo que você precisa para trabalhar.
+                    </p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="benefit-title">Preços Transparentes</h3>
+                    <p class="benefit-description">
+                        Sem taxas ocultas. Veja exatamente quanto vai pagar antes de fazer sua reserva.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section class="how-it-works-section" id="how-it-works">
+        <div class="steps-container">
+            <header class="section-header">
+                <h2 class="section-title">Como Funciona</h2>
+                <p class="section-subtitle">
+                    Encontre e reserve seu espaço de coworking em apenas 3 passos simples
+                </p>
+            </header>
+            
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Busque</h3>
+                    <p class="step-description">
+                        Use nossos filtros para encontrar espaços que atendem suas necessidades específicas de localização, preço e comodidades.
+                    </p>
+                    <div class="step-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Compare</h3>
+                    <p class="step-description">
+                        Veja fotos, avaliações e detalhes de cada espaço para tomar a melhor decisão para seu trabalho.
+                    </p>
+                    <div class="step-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Reserve</h3>
+                    <p class="step-description">
+                        Faça sua reserva de forma rápida e segura. Receba confirmação instantânea e comece a trabalhar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Comodidades -->
+    <section class="amenities-section" id="amenities">
+        <div class="amenities-container">
+            <header class="section-header">
+                <h2 class="section-title">Comodidades Disponíveis</h2>
+                <p class="section-subtitle">
+                    Encontre espaços com todas as comodidades que você precisa para trabalhar com conforto e produtividade
+                </p>
+            </header>
+            
+            <div class="amenities-content">
+                <div class="amenities-list">
+                    <article class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <span class="amenity-text">Café Grátis</span>
+                    </article>
+                    
+                    <article class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <span class="amenity-text">Cozinha Completa</span>
+                    </article>
+                    
+                    <article class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <span class="amenity-text">Ar Condicionado</span>
+                    </article>
+                    
+                    <article class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <span class="amenity-text">Armário Privado</span>
+                    </article>
+                    
+                    <article class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <span class="amenity-text">Estacionamento</span>
+                    </article>
+                    
+                    <article class="amenity-item">
+                        <div class="amenity-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span class="amenity-text">Espaço para Convivência</span>
+                    </article>
+                </div>
+                
+                <div class="amenities-image">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80" alt="Pessoa tomando café em ambiente de coworking" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Ambiente Acolhedor</h3>
+                        <p>Desfrute de um café quentinho enquanto trabalha em um ambiente inspirador</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Aplicativo Mobile -->
+    <section class="app-section" id="app">
+        <div class="app-container">
+            <div class="app-content">
+                <h2>Baixe Nosso App</h2>
+                <p>
+                    Tenha acesso completo aos melhores espaços de coworking direto do seu celular. 
+                    Reserve, gerencie e descubra novos espaços onde quer que esteja.
+                </p>
+                
+                <ul class="app-features">
+                    <li>Busca em tempo real</li>
+                    <li>Reservas instantâneas</li>
+                    <li>Notificações personalizadas</li>
+                    <li>Mapa interativo</li>
+                    <li>Histórico de reservas</li>
+                    <li>Favoritos e avaliações</li>
+                </ul>
+                
+                <div class="app-buttons">
+                    <a href="https://apps.apple.com/br/app/seathub/id6743491748" class="app-button" aria-label="Baixar na App Store">
+                        <i class="fab fa-apple"></i>
+                        App Store
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.elevate.elevatecoworking" class="app-button" aria-label="Baixar no Google Play">
+                        <i class="fab fa-google-play"></i>
+                        Google Play
+                    </a>
+                </div>
+            </div>
+            
+            <div class="app-image">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Pessoa usando smartphone com aplicativo de coworking" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="testimonials-container">
+            <header class="section-header">
+                <h2 class="section-title">O que nossos usuários dizem</h2>
+                <p class="section-subtitle">
+                    Histórias reais de profissionais que transformaram sua forma de trabalhar
+                </p>
+            </header>
+            
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <blockquote class="testimonial-quote">
+                        "O SeatHub revolucionou minha rotina de trabalho. Encontrei espaços incríveis perto de casa e ainda fiz networking com outros profissionais da minha área."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Maria Silva</h4>
+                            <p>Designer Freelancer</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <blockquote class="testimonial-quote">
+                        "Como empreendedor, preciso de flexibilidade. O SeatHub me permite trabalhar de diferentes locais sem perder produtividade. A interface é intuitiva e as reservas são instantâneas."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h4>João Santos</h4>
+                            <p>CEO - Tech Startup</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <blockquote class="testimonial-quote">
+                        "A qualidade dos espaços é excepcional. Todos têm infraestrutura completa, WiFi rápido e ambiente profissional. Recomendo para qualquer profissional que busca produtividade."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Ana Costa</h4>
+                            <p>Consultora de Marketing</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção CTA Final -->
+    <section class="cta-section" id="cta">
+        <div class="cta-container">
+            <h2 class="cta-title">Pronto para Transformar sua Forma de Trabalhar?</h2>
+            <p class="cta-subtitle">
+                Junte-se a milhares de profissionais que já descobriram o poder do coworking. 
+                Encontre seu espaço ideal hoje mesmo e eleve sua produtividade a outro nível.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://seathub.net/" target="_blank" class="cta-primary">
+                    <i class="fas fa-search"></i> Começar Busca Agora
+                </a>
+                <a href="#app" class="cta-secondary">
+                    <i class="fas fa-mobile-alt"></i> Baixar App
+                </a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <img src="./images/seathubLogo02.png" alt="SeatHub Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-tagline">
+                        Plataforma inteligente que revoluciona a forma de encontrar e reservar espaços de coworking, conectando profissionais a ambientes inspiradores.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacidade</a></li>
+                        <li><a href="#">Termos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Desenvolvido por</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">Elevate - Desenvolvimento de Software</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 SeatHub. Todos os direitos reservados.</p>
+                <p class="footer-developer">
+                    Desenvolvido por <a href="#" target="_blank">Elevate</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
