@@ -39,7 +39,7 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -106,14 +106,338 @@ body {
 
 .hero-image {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
 }
 
-.hero-image img {
+/* Container das imagens flutuantes */
+.floating-spaces {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
 }
+
+/* Estilo base para as imagens flutuantes */
+.floating-space {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ffd700;
+    opacity: 0;
+    animation: fadeInFloat 0.8s ease-out forwards;
+    transition: all 0.3s ease;
+}
+
+.floating-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Posicionamento orgânico das imagens */
+.space-1 {
+    top: 5%;
+    left: 20%;
+    transform: rotate(-6deg);
+    animation-delay: 0.5s;
+}
+
+.space-3 {
+    top: 0%;
+    right: 0%;
+    transform: rotate(-4deg);
+    animation-delay: 1.5s;
+}
+
+.space-4 {
+    top: 70%;
+    left: 0%;
+    transform: rotate(5deg);
+    animation-delay: 2s;
+}
+
+/* Animação de entrada e flutuação */
+@keyframes fadeInFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Animação contínua de flutuação */
+.space-1 {
+    animation: fadeInFloat 0.8s ease-out 0.5s forwards, float 3s ease-in-out 1.3s infinite;
+}
+
+.space-3 {
+    animation: fadeInFloat 0.8s ease-out 1.5s forwards, float 4s ease-in-out 2.3s infinite;
+}
+
+.space-4 {
+    animation: fadeInFloat 0.8s ease-out 2s forwards, float 3.2s ease-in-out 2.8s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Efeito hover nas imagens flutuantes */
+.floating-space:hover {
+    transform: translateY(-5px) scale(1.05);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    cursor: pointer;
+    animation-play-state: paused;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.space-1:hover {
+    transform: translateY(-5px) scale(1.05) rotate(-6deg);
+}
+
+.space-3:hover {
+    transform: translateY(-5px) scale(1.05) rotate(-4deg);
+}
+
+.space-4:hover {
+    transform: translateY(-5px) scale(1.05) rotate(5deg);
+}
+
+/* Container do Monitor */
+.monitor-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+/* Container do Mobile */
+.mobile-container {
+    position: absolute;
+    top: 60%;
+    right: 0%;
+    width: 200px;
+    height: 400px;
+    transform: translateY(-50%);
+    z-index: 10;
+    perspective: 1000px;
+}
+
+/* Moldura do Mobile */
+.mobile-frame {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+    border-radius: 30px;
+    padding: 8px;
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 2px #1a1a1a,
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    transform: rotateY(-15deg) rotateX(5deg);
+    transition: transform 0.3s ease;
+    animation: mobileGlow 3s ease-in-out infinite;
+}
+
+@keyframes mobileGlow {
+    0%, 100% {
+        box-shadow: 
+            0 15px 30px rgba(0, 0, 0, 0.4),
+            inset 0 0 0 2px #1a1a1a,
+            0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 15px 30px rgba(0, 0, 0, 0.4),
+            inset 0 0 0 2px #1a1a1a,
+            0 0 0 1px rgba(102, 126, 234, 0.3);
+    }
+}
+
+.mobile-frame::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #1a1a1a;
+    border-radius: 22px;
+    z-index: 1;
+}
+
+/* Tela do Mobile */
+.mobile-screen {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+    background-image: url('./images/mobspaces.PNG');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.mobile-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.05) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Efeito hover no mobile */
+.mobile-container:hover .mobile-frame {
+    transform: rotateY(-10deg) rotateX(2deg) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 2px #1a1a1a,
+        0 0 0 1px rgba(102, 126, 234, 0.4);
+}
+
+.monitor-container:hover .monitor-frame {
+    transform: rotateX(2deg) rotateY(-1deg) scale(1.02);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 2px #1a1a1a,
+        0 0 0 1px rgba(102, 126, 234, 0.4);
+}
+
+/* Moldura do Monitor */
+.monitor-frame {
+    width: 100%;
+    height: 380px;
+    background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+    border-radius: 25px;
+    padding: 12px;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 2px #1a1a1a,
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    transform: rotateX(5deg) rotateY(-2deg);
+    transition: transform 0.3s ease;
+    animation: monitorGlow 3s ease-in-out infinite;
+}
+
+@keyframes monitorGlow {
+    0%, 100% {
+        box-shadow: 
+            0 25px 50px rgba(0, 0, 0, 0.4),
+            inset 0 0 0 2px #1a1a1a,
+            0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 25px 50px rgba(0, 0, 0, 0.4),
+            inset 0 0 0 2px #1a1a1a,
+            0 0 0 1px rgba(102, 126, 234, 0.3);
+    }
+}
+
+.monitor-frame::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.monitor-frame::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 20px;
+    background: #2c2c2c;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tela do Monitor */
+.monitor-screen {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1);
+    background-image: url('./images/SiteSeatHub.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.monitor-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.05) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
 
 .floating-elements {
     position: absolute;
@@ -438,7 +762,7 @@ body {
 .app-section {
     padding: 100px 0;
     background: linear-gradient(rgba(248, 249, 250, 0.9), rgba(255, 255, 255, 0.9)), 
-                url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
+                url('./images/segurandocelularapp.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -526,14 +850,110 @@ body {
 }
 
 .app-image {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
 }
 
-.app-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+/* Container do Mobile da Seção App */
+.app-mobile-container {
+    position: relative;
+    width: 250px;
+    height: 500px;
+    perspective: 1000px;
+}
+
+/* Moldura do Mobile da Seção App */
+.app-mobile-frame {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 2px #1a1a1a,
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    transform: rotateY(-10deg) rotateX(5deg);
+    transition: transform 0.3s ease;
+    animation: appMobileGlow 3s ease-in-out infinite;
+}
+
+@keyframes appMobileGlow {
+    0%, 100% {
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.4),
+            inset 0 0 0 2px #1a1a1a,
+            0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.4),
+            inset 0 0 0 2px #1a1a1a,
+            0 0 0 1px rgba(102, 126, 234, 0.3);
+    }
+}
+
+.app-mobile-frame::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    background: #1a1a1a;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+/* Tela do Mobile da Seção App */
+.app-mobile-screen {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+    background-image: url('./images/mobcomecar.PNG');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.app-mobile-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.05) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Efeito hover no mobile da seção app */
+.app-mobile-container:hover .app-mobile-frame {
+    transform: rotateY(-5deg) rotateX(2deg) scale(1.02);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 2px #1a1a1a,
+        0 0 0 1px rgba(102, 126, 234, 0.4);
 }
 
 /* Seção de Depoimentos */
@@ -1009,8 +1429,83 @@ body {
         grid-template-columns: 1fr;
     }
 
+    /* Responsividade para o Monitor */
+    .hero-image {
+        height: 500px;
+    }
+
+    .monitor-container {
+        height: 400px;
+        max-width: 100%;
+    }
+
+    .monitor-frame {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    .monitor-container:hover .monitor-frame {
+        transform: rotateX(0deg) rotateY(0deg) scale(1.01);
+    }
+
+    /* Responsividade para o Mobile */
+    .mobile-container {
+        width: 150px;
+        height: 300px;
+        right: 3%;
+    }
+
+    .mobile-frame {
+        transform: rotateY(-5deg) rotateX(0deg);
+    }
+
+    .mobile-container:hover .mobile-frame {
+        transform: rotateY(-3deg) rotateX(0deg) scale(1.01);
+    }
+
+    /* Ajustes para imagens flutuantes em mobile */
+    .floating-space {
+        width: 120px;
+        height: 120px;
+    }
+
+    .space-1 {
+        top: 5%;
+        left: 20%;
+        transform: rotate(-6deg);
+    }
+
+    .space-3 {
+        top: 0%;
+        right: 0%;
+        transform: rotate(-4deg);
+    }
+
+    .space-4 {
+        top: 70%;
+        left: 0%;
+        transform: rotate(5deg);
+    }
+
     .cta-title {
         font-size: 2.2rem;
+    }
+
+    /* Responsividade para mobile da seção app */
+    .app-image {
+        height: 400px;
+    }
+
+    .app-mobile-container {
+        width: 200px;
+        height: 400px;
+    }
+
+    .app-mobile-frame {
+        transform: rotateY(-5deg) rotateX(0deg);
+    }
+
+    .app-mobile-container:hover .app-mobile-frame {
+        transform: rotateY(-3deg) rotateX(0deg) scale(1.01);
     }
 
     .cta-buttons {
@@ -1114,6 +1609,30 @@ body {
         width: 45px;
         height: 45px;
         font-size: 16px;
+    }
+
+    /* Ajustes para imagens flutuantes em telas muito pequenas */
+    .floating-space {
+        width: 100px;
+        height: 100px;
+    }
+
+    .space-1 {
+        top: 10%;
+        left: 15%;
+        transform: rotate(-4deg);
+    }
+
+    .space-3 {
+        top: 5%;
+        right: 5%;
+        transform: rotate(-3deg);
+    }
+
+    .space-4 {
+        top: 65%;
+        left: 5%;
+        transform: rotate(4deg);
     }
 
     .logo-img {

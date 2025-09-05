@@ -10,7 +10,7 @@ const translations = {
         'header-cta': 'Acessar',
         
         // Hero Section
-        'hero-title': 'Encontre o <span class="highlight">espaço perfeito</span><br>para seu coworking',
+        'hero-title': 'Encontre o <br><span class="highlight">Espaço Perfeito</span><br>Para Seu Coworking',
         'hero-subtitle': 'Conecte-se com os melhores espaços de trabalho compartilhado. Encontre ambientes inspiradores, equipados e prontos para impulsionar sua produtividade e networking.',
         'hero-cta-primary': 'Explorar Espaços',
         'hero-cta-secondary': 'Como Funciona',
@@ -83,13 +83,6 @@ const translations = {
         
         // Footer
         'footer-tagline': 'Plataforma inteligente que revoluciona a forma de encontrar e reservar espaços de coworking, conectando profissionais a ambientes inspiradores.',
-        'footer-company': 'Empresa',
-        'footer-about': 'Sobre nós',
-        'footer-help': 'Central de Ajuda',
-        'footer-contact': 'Contato',
-        'footer-legal': 'Legal',
-        'footer-privacy': 'Privacidade',
-        'footer-terms': 'Termos',
         'footer-developed': 'Desenvolvido por',
         'footer-elevate': 'Elevate - Desenvolvimento de Software',
         'footer-copyright': '© 2025 SeatHub. Todos os direitos reservados.',
@@ -178,13 +171,6 @@ const translations = {
         
         // Footer
         'footer-tagline': 'Intelligent platform that revolutionizes the way to find and book coworking spaces, connecting professionals to inspiring environments.',
-        'footer-company': 'Company',
-        'footer-about': 'About us',
-        'footer-help': 'Help Center',
-        'footer-contact': 'Contact',
-        'footer-legal': 'Legal',
-        'footer-privacy': 'Privacy',
-        'footer-terms': 'Terms',
         'footer-developed': 'Developed by',
         'footer-elevate': 'Elevate - Software Development',
         'footer-copyright': '© 2025 SeatHub. All rights reserved.',
@@ -273,13 +259,6 @@ const translations = {
         
         // Footer
         'footer-tagline': 'Plataforma inteligente que revoluciona la forma de encontrar y reservar espacios de coworking, conectando profesionales a ambientes inspiradores.',
-        'footer-company': 'Empresa',
-        'footer-about': 'Sobre nosotros',
-        'footer-help': 'Centro de Ayuda',
-        'footer-contact': 'Contacto',
-        'footer-legal': 'Legal',
-        'footer-privacy': 'Privacidad',
-        'footer-terms': 'Términos',
         'footer-developed': 'Desarrollado por',
         'footer-elevate': 'Elevate - Desarrollo de Software',
         'footer-copyright': '© 2025 SeatHub. Todos los derechos reservados.',
@@ -298,13 +277,9 @@ function translatePage(lang) {
     elements.forEach(element => {
         const key = element.getAttribute('data-translate');
         
-        // Lógica especial para o H1: só traduz se NÃO for PT-BR
+        // Lógica especial para o H1
         if (key === 'hero-title') {
-            if (lang === 'pt') {
-                // Para PT-BR, mantém o conteúdo original do HTML (não faz nada)
-                return;
-            } else if (translations[lang] && translations[lang][key]) {
-                // Para EN/ES, força a tradução
+            if (translations[lang] && translations[lang][key]) {
                 element.innerHTML = translations[lang][key];
             }
             return;
@@ -417,15 +392,8 @@ function initializeTranslationElements() {
         
         // Footer
         '.footer-tagline': 'footer-tagline',
-        '.footer-section:nth-of-type(1) h4': 'footer-company',
-        '.footer-section:nth-of-type(1) li:nth-child(1) a': 'footer-about',
-        '.footer-section:nth-of-type(1) li:nth-child(2) a': 'footer-help',
-        '.footer-section:nth-of-type(1) li:nth-child(3) a': 'footer-contact',
-        '.footer-section:nth-of-type(2) h4': 'footer-legal',
-        '.footer-section:nth-of-type(2) li:nth-child(1) a': 'footer-privacy',
-        '.footer-section:nth-of-type(2) li:nth-child(2) a': 'footer-terms',
-        '.footer-section:nth-of-type(3) h4': 'footer-developed',
-        '.footer-section:nth-of-type(3) li a': 'footer-elevate',
+        '.footer-section h4': 'footer-developed',
+        '.footer-section li a': 'footer-elevate',
         '.footer-copyright': 'footer-copyright',
         '.footer-developer': 'footer-developer'
     };
