@@ -511,7 +511,7 @@ body {
 .benefits-section {
     padding: 100px 0;
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
-                url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+                url('./images/background1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -594,7 +594,7 @@ body {
 .how-it-works-section {
     padding: 100px 0;
     background: linear-gradient(rgba(248, 249, 250, 0.9), rgba(248, 249, 250, 0.9)), 
-                url('https://images.unsplash.com/photo-1497032628199-86f3b503dc6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+                url('./images/background1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -960,7 +960,7 @@ body {
 .testimonials-section {
     padding: 100px 0;
     background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
-                url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+                url('./images/background1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1036,7 +1036,7 @@ body {
 .cta-section {
     padding: 100px 0;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80');
+                url('./images/coworking.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1196,6 +1196,8 @@ body {
     cursor: pointer;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
 }
 
 .lang-btn:hover,
@@ -1203,6 +1205,7 @@ body {
     background: #ffd700;
     border-color: #ffd700;
     color: #000000;
+    text-decoration: none;
 }
 
 .header-cta {
