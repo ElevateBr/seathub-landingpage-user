@@ -10,12 +10,23 @@
     <meta property="og:title" content="SeatHub - Encontre o Espaço de Coworking Perfeito">
     <meta property="og:description" content="Conecte-se com os melhores espaços de trabalho compartilhado. Encontre ambientes inspiradores, equipados e prontos para impulsionar sua produtividade.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seathub.com">
+    <meta property="og:url" content="https://user.seathub.net">
+    <meta property="og:image" content="https://user.seathub.net/images/SiteSeatHub.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://user.seathub.net/images/SiteSeatHub.png">
     <meta name="twitter:title" content="SeatHub - Encontre o Espaço de Coworking Perfeito">
     <meta name="twitter:description" content="Conecte-se com os melhores espaços de trabalho compartilhado. Encontre ambientes inspiradores, equipados e prontos para impulsionar sua produtividade.">
     <title>SeatHub | Encontre a Seu Espaço de Trabalho Coworking e Sala de Reunião</title>
-    <link rel="canonical" href="https://seathub.com">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
+    <link rel="apple-touch-icon" href="./images/favicon.png">
+    <link rel="canonical" href="https://user.seathub.net/">
+    <link rel="alternate" hreflang="pt-br" href="https://user.seathub.net/">
+    <link rel="alternate" hreflang="en" href="https://user.seathub.net/en">
+    <link rel="alternate" hreflang="es" href="https://user.seathub.net/es">
+    <link rel="alternate" hreflang="x-default" href="https://user.seathub.net/">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -40,8 +51,8 @@
             <div class="header-right">
                 <div class="language-selector">
                     <button class="lang-btn active" data-lang="pt">PT</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="es">ES</button>
+                    <a href="./en/" class="lang-btn">EN</a>
+                    <a href="./es/" class="lang-btn">ES</a>
                 </div>
                 
                 <a href="https://seathub.net/" target="_blank" class="header-cta">Acessar</a>
@@ -135,7 +146,7 @@
     <section class="benefits-section" id="explore">
         <div class="benefits-container">
             <header class="section-header">
-                <h2 class="section-title"></h2>
+                <h2 class="section-title">Por que escolher o SeatHub?</h2>
                 <p class="section-subtitle">
                     Descubra as vantagens de encontrar seu espaço de coworking ideal conosco
                 </p>
@@ -305,7 +316,7 @@
                 </div>
                 
                 <div class="amenities-image">
-                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80" alt="Pessoa tomando café em ambiente de coworking" loading="lazy">
+                    <img src="./images/coworking.jpg" alt="Pessoa tomando café em ambiente de coworking" loading="lazy">
                     <div class="image-overlay">
                         <h3>Ambiente Acolhedor</h3>
                         <p>Desfrute de um café quentinho enquanto trabalha em um ambiente inspirador</p>
@@ -476,7 +487,12 @@
         </div>
     </footer>
 
-    <script src="translations.js"></script>
+    <!-- Sistema de Tradução - Comentado pois agora usamos páginas estáticas separadas -->
+    <!-- <script src="translations/pt-br.js"></script> -->
+    <!-- <script src="translations/en.js"></script> -->
+    <!-- <script src="translations/es.js"></script> -->
+    <!-- <script src="translations/translations.js"></script> -->
+    <script src="seo.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

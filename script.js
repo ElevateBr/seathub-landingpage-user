@@ -149,11 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounterAnimation();
     initBackToTop();
 
-    // Inicializar sistema de tradução se disponível
-    if (typeof initTranslationSystem === 'function') {
-        initTranslationSystem();
-    }
-
     console.log('SeatHub Landing Page carregada com sucesso!');
 });
 
