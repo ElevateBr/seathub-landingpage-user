@@ -1231,6 +1231,85 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     color: #000000;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    color: #ffd700;
+}
+
+.mobile-menu-toggle.active {
+    color: #ffd700;
+}
+
+/* Garantir que o botão volte ao preto quando não estiver ativo */
+.mobile-menu-toggle:not(.active) {
+    color: #000000;
+}
+
+/* Menu mobile ativo */
+.nav-menu.active {
+    display: flex;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+    gap: 20px;
+}
+
+.nav-menu.active li {
+    text-align: center;
+    width: 100%;
+}
+
+.nav-menu.active a {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+}
+
+.nav-menu.active a:last-child {
+    border-bottom: none;
+}
+
+/* Botão CTA no menu mobile */
+.mobile-cta {
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 2px solid #ffd700;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.nav-menu.active .mobile-only {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: #ffd700;
+    color: #000000;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-menu.active .mobile-only:hover {
+    background: #ffed4e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,215,0,0.3);
 }
 
 /* Footer */
